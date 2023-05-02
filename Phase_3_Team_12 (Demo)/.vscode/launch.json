@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/arsh/Coursework/CS301/Phase_3_Team_12 copy",
+      "program": "/Users/arsh/Coursework/CS301/Phase_3_Team_12 copy/build/Debug/outDebug"
+    }
+  ]
+}
