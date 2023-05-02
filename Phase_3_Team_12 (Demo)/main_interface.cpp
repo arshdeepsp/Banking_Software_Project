@@ -121,7 +121,13 @@ void displayAccounts(vector<Account> accounts) {
 // Function to read account information from file
 vector<Account> readAccountsFromFile(string fileName) {
     vector<Account> accounts;
-    ifstream inputFile(fileName), passwords("passwords.txt");
+    ifstream inputFile(fileName), passwords;
+
+    if (fileName == "accounts.txt")
+        passwords.open("passwords.txt");
+    else
+        passwords.open("test_passwords.txt");
+
     if (inputFile.is_open() && passwords.is_open()) {
         string fname, lname, password, isAdmin;
         Account account;
@@ -140,19 +146,30 @@ vector<Account> readAccountsFromFile(string fileName) {
 
 // Function to write account information to file
 void writeAccountsToFile(string fileName, vector<Account> accounts) {
-    ofstream outputFile(fileName), passwords("passwords.txt"), adminFile("admins.txt");
+    ofstream outputFile(fileName), adminFile, passwords;
+
+    if (fileName == "accounts.txt") {
+        passwords.open("passwords.txt");
+        adminFile.open("admins.txt");
+    }
+    
+    else
+        passwords.open("test_passwords.txt");
+
     if (outputFile.is_open()) {
         for (Account account : accounts) {
             outputFile << account.name << " " << account.accountNumber << " " << account.balance << " " << account.isAdmin << " " << account.masterAdmin << endl;
         }
         outputFile.close();
     }
+    
     if (passwords.is_open()) {
         for (Account account : accounts) {
             passwords << account.name << " " << account.password << endl;
         }
         passwords.close();
     }
+
     if (adminFile.is_open()) {
         for (Account account : accounts) {
             if (account.isAdmin == "Yes") adminFile << account.accountNumber << " " << account.password << endl;

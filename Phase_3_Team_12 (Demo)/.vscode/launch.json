@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/arsh/Coursework/CS301/Phase_3_Team_12 copy",
-      "program": "/Users/arsh/Coursework/CS301/Phase_3_Team_12 copy/build/Debug/outDebug"
+      "cwd": "/Users/arsh/Coursework/CS301/CS301 Project/Phase_3_Team_12 (Demo)",
+      "program": "/Users/arsh/Coursework/CS301/CS301 Project/Phase_3_Team_12 (Demo)/build/Debug/outDebug"
     }
   ]
 }

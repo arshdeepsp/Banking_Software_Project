@@ -43,7 +43,9 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "ios": "cpp",
-    "iomanip": "cpp"
+    "iomanip": "cpp",
+    "string": "cpp",
+    "filesystem": "cpp"
   },
   "C_Cpp_Runner.showCompilationTime": false
 }

@@ -1,7 +1,7 @@
-Master Admin 1429285 2000 Yes Yes
-Arsh Parmar 8016807 3000 No No
-Rose Parmar 3650073 3000 No No
-Jac Dattler 9027544 3000 Yes No
-Onkar Parmar 9564440 7000 Yes No
-Alex Gregory 9484492 3000 No No
-Anishka K 3807987 3000 Yes No
+Arsh Parmar 8016807 2500 Yes Yes
+Rose Parmar 3650073 2500 No No
+Sid Jain 9564440 1500 No No
+Jac Dattler 9484492 1000 Yes No
+Onkar Parmar 9108930 20000 No No
+Nidhi Parmar 9027544 20000 No No
+Anish Sarkar 1929123 6969 Yes Yes

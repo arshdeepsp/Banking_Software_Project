@@ -5,7 +5,24 @@
 #include <map>
 #include "main_interface.cpp"
 
-// LARGE INPUT TEST
+using namespace std;
+
+string gen_random(const int len) {
+    static const char alphanum[] =
+        "0123456789"
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz";
+    string tmp_s;
+    tmp_s.reserve(len);
+
+    for (int i = 0; i < len; ++i) {
+        tmp_s += alphanum[rand() % (sizeof(alphanum) - 1)];
+    }
+    
+    return tmp_s;
+}
+
+// LARGE INPUT TEST w/ 2000 inputs
 int main() {
     string ifile = "testinputs.txt", fname, lname;
     ifstream inputs(ifile);
@@ -20,8 +37,10 @@ int main() {
         while (inputs >> fname) {
             inputs >> lname;
 
+            string password = gen_random(10);
+
             string name = (fname+" "+lname);
-            Account account {name,0,"sample",500,"No","No"};
+            Account account {name,0,password,500,"No","No"};
 
             counter++;
 
@@ -29,6 +48,7 @@ int main() {
             createAccountFromStruct(accounts, "testout.txt", account);
         }
 
+        cout << endl;
         // Table of tested inputs
         displayAccounts(accounts);
 
